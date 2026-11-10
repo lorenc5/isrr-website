@@ -43,30 +43,47 @@
     <div class="methods-grid">
 
       <div class="method-card">
-        <h3>eiCompare</h3>
-        <span class="tech-label">R Package</span>
+        <h3>eiCompare Suite</h3>
+        <span class="tech-label">R Packages</span>
         <p class="lead" style="color: var(--unm-cherry); font-weight: 600; font-size: 0.85rem;">Loren Collingwood &amp; collaborators</p>
         <p>
-          eiCompare is an R package for quantifying racially polarized voting (RPV) in elections.
-          It implements and compares ecological inference methods &mdash; including EI and RxC &mdash;
-          providing a unified framework for legal practitioners, expert witnesses, and researchers
-          working on Voting Rights Act cases.
+          The eiCompare suite is a family of R packages for voting rights research, providing
+          tools for measuring racially polarized voting (RPV), ecological inference, and
+          supporting redistricting and Voting Rights Act litigation. The suite has been used
+          in voting rights cases across the country.
         </p>
+
+        <h4 style="margin-top: 1rem; color: var(--unm-dark);">eiCompare</h4>
         <p>
-          The package was developed through applied work on cases such as <em>East Ramapo</em> and has
-          been used in voting rights litigation across the country. It builds on and extends
-          existing packages including <code>ei</code>, <code>eiPack</code>, <code>wru</code>,
-          and <code>censusxy</code>.
-        </p>
-        <p>
-          Key capabilities include ecological inference estimation, comparison of EI methods,
-          geocoding and demographic data integration, and visualization of RPV results.
+          The core package implements and compares ecological inference methods &mdash; including
+          EI and RxC &mdash; providing a unified framework for legal practitioners, expert witnesses,
+          and researchers. Developed through applied work on cases such as <em>East Ramapo</em>,
+          it builds on and extends packages including <code>ei</code>, <code>eiPack</code>,
+          <code>wru</code>, and <code>censusxy</code>.
         </p>
         <div class="links">
           <a href="https://cran.r-project.org/package=eiCompare">CRAN</a>
           <a href="https://github.com/RPVote/eiCompare">GitHub</a>
           <a href="https://journal.r-project.org/archive/2016/RJ-2016-035/index.html">R Journal Article</a>
         </div>
+
+        <h4 style="margin-top: 1rem; color: var(--unm-dark);">eiExpand</h4>
+        <p>
+          Augments eiCompare's RPV functionality with streamlined analyses and visualizations
+          designed for voting rights and redistricting litigation. Implements methods described
+          in Barreto, Collingwood, Garcia-Rios, and Oskooii (2022), "Estimating Candidate Support
+          in Voting Rights Act Cases" (<em>Sociological Methods &amp; Research</em>).
+        </p>
+        <div class="links">
+          <a href="https://cran.r-project.org/package=eiExpand">CRAN</a>
+        </div>
+
+        <h4 style="margin-top: 1rem; color: var(--unm-dark);">eiFactor5</h4>
+        <p>
+          Extends the ecological inference framework to multi-group, multi-candidate settings,
+          enabling RPV analysis in increasingly diverse electorates and complex election
+          configurations encountered in voting rights research.
+        </p>
       </div>
 
       <div class="method-card">
