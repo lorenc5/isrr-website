@@ -1,0 +1,508 @@
+/* ============================================
+   Institute for Study of Rights and Repression
+   UNM - CSS Stylesheet
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --unm-cherry: #BA0C2F;
+  --unm-cherry-dark: #8a0922;
+  --unm-silver: #A7A9AC;
+  --unm-gray: #63666A;
+  --unm-dark: #1a1a2e;
+  --text-primary: #2c2c2c;
+  --text-secondary: #555;
+  --bg-light: #f8f8f8;
+  --bg-white: #ffffff;
+  --border-light: #e0e0e0;
+  --max-width: 1100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.7;
+  background: var(--bg-white);
+}
+
+a {
+  color: var(--unm-cherry);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--unm-cherry-dark);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Header & Navigation --- */
+header {
+  background: var(--unm-dark);
+  border-bottom: 4px solid var(--unm-cherry);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+}
+
+.site-brand a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.site-brand a:hover {
+  color: var(--unm-silver);
+  text-decoration: none;
+}
+
+.site-brand .abbrev {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+}
+
+nav a {
+  display: block;
+  padding: 1.1rem 1.1rem;
+  color: #ccc;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+  background: rgba(186, 12, 47, 0.3);
+  text-decoration: none;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background: linear-gradient(135deg, var(--unm-dark) 0%, #2d1f3d 50%, var(--unm-cherry-dark) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.hero h1 strong {
+  font-weight: 700;
+}
+
+.hero .subtitle {
+  font-size: 1.15rem;
+  color: var(--unm-silver);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.hero .tagline {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* --- Page Content --- */
+.page-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--unm-dark);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--unm-cherry);
+}
+
+.page-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+/* --- Section Styling --- */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: var(--unm-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border-light);
+}
+
+section h3 {
+  font-size: 1.15rem;
+  color: var(--unm-cherry);
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+/* --- People Cards --- */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.person-card {
+  display: flex;
+  gap: 1.5rem;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.person-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.person-photo {
+  width: 150px;
+  min-width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+}
+
+.person-info h3 {
+  margin-top: 0;
+  color: var(--unm-dark);
+  font-size: 1.2rem;
+}
+
+.person-info .title {
+  color: var(--unm-cherry);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.person-info p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.person-info .contact {
+  font-size: 0.85rem;
+  color: var(--unm-gray);
+}
+
+/* --- Student Grid --- */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.student-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  background: var(--bg-white);
+}
+
+.student-card .student-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  background: var(--bg-light);
+  border: 2px solid var(--border-light);
+}
+
+.student-card h4 {
+  font-size: 1rem;
+  color: var(--unm-dark);
+  margin-bottom: 0.25rem;
+}
+
+.student-card .focus {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* --- Research Pillars --- */
+.research-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.pillar {
+  background: var(--bg-light);
+  border-left: 4px solid var(--unm-cherry);
+  padding: 1.5rem 1.5rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.pillar h3 {
+  color: var(--unm-dark);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.pillar .lead {
+  font-size: 0.85rem;
+  color: var(--unm-cherry);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pillar p, .pillar ul {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.pillar ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.pillar ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* --- Methods Section --- */
+.methods-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.method-card {
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 2rem;
+  background: var(--bg-white);
+}
+
+.method-card h3 {
+  color: var(--unm-dark);
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.method-card .tech-label {
+  display: inline-block;
+  background: var(--unm-cherry);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+
+.method-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.method-card .links a {
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+/* --- Publications --- */
+.pub-section {
+  margin-bottom: 2.5rem;
+}
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pub-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pub-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-list .pub-title {
+  font-weight: 600;
+  color: var(--unm-dark);
+}
+
+.pub-list .pub-venue {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.pub-list .pub-year {
+  display: inline-block;
+  background: var(--bg-light);
+  color: var(--unm-gray);
+  font-size: 0.8rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+  margin-left: 0.25rem;
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--unm-dark);
+  color: #999;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  border-top: 4px solid var(--unm-cherry);
+}
+
+footer a {
+  color: var(--unm-silver);
+}
+
+footer .footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+footer .unm-link {
+  margin-top: 0.5rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .site-brand .full-name {
+    display: none;
+  }
+  .site-brand .abbrev {
+    display: inline;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--unm-dark);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .person-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .research-pillars,
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}

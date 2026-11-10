@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methods &amp; Software | ISRR</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-brand">
+      <a href="index.html">
+        <span class="full-name">Institute for Study of Rights &amp; Repression</span>
+        <span class="abbrev">ISRR</span>
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav ul').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="methods.html" class="active">Methods &amp; Software</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-content">
+
+  <h1 class="page-title">Methods &amp; Software</h1>
+  <p class="page-intro">
+    ISRR faculty contribute to methodological innovation through open-source statistical software
+    and large-scale AI research infrastructure. Our tools and methods are designed to serve both
+    academic researchers and legal practitioners.
+  </p>
+
+  <section>
+    <div class="methods-grid">
+
+      <div class="method-card">
+        <h3>eiCompare</h3>
+        <span class="tech-label">R Package</span>
+        <p class="lead" style="color: var(--unm-cherry); font-weight: 600; font-size: 0.85rem;">Loren Collingwood &amp; collaborators</p>
+        <p>
+          eiCompare is an R package for quantifying racially polarized voting (RPV) in elections.
+          It implements and compares ecological inference methods &mdash; including EI and RxC &mdash;
+          providing a unified framework for legal practitioners, expert witnesses, and researchers
+          working on Voting Rights Act cases.
+        </p>
+        <p>
+          The package was developed through applied work on cases such as <em>East Ramapo</em> and has
+          been used in voting rights litigation across the country. It builds on and extends
+          existing packages including <code>ei</code>, <code>eiPack</code>, <code>wru</code>,
+          and <code>censusxy</code>.
+        </p>
+        <p>
+          Key capabilities include ecological inference estimation, comparison of EI methods,
+          geocoding and demographic data integration, and visualization of RPV results.
+        </p>
+        <div class="links">
+          <a href="https://cran.r-project.org/package=eiCompare">CRAN</a>
+          <a href="https://github.com/RPVote/eiCompare">GitHub</a>
+          <a href="https://journal.r-project.org/archive/2016/RJ-2016-035/index.html">R Journal Article</a>
+        </div>
+      </div>
+
+      <div class="method-card">
+        <h3>AI Research with Ai2</h3>
+        <span class="tech-label">NLP / AI</span>
+        <p class="lead" style="color: var(--unm-cherry); font-weight: 600; font-size: 0.85rem;">Sarah Dreier &amp; Allen Institute for AI</p>
+        <p>
+          Dreier is co-PI on the <strong>Open Multimodal AI Infrastructure to Accelerate Science</strong>
+          project, a $152 million initiative funded by the National Science Foundation and NVIDIA and led
+          by the Allen Institute for AI (Ai2). She is the only social scientist among the five
+          principal investigators.
+        </p>
+        <p>
+          Her role focuses on data curation &mdash; identifying and preparing diverse data types relevant
+          to scientific tasks such as research analysis and code generation. This work builds on her
+          methodological research evaluating how well large language models handle the idiosyncratic
+          text produced by politicians and policymakers.
+        </p>
+        <p>
+          The broader NLP program at ISRR develops and evaluates computational text analysis methods
+          for political science, including supervised classification of government rationalizations
+          for rights abuses and assessment of LLM performance on political concepts.
+        </p>
+        <div class="links">
+          <a href="https://allenai.org/">Allen Institute for AI</a>
+          <a href="https://news.unm.edu/news/political-science-professor-joins-grant-funded-project-to-advance-ai-research">UNM News</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Methodological Expertise</h2>
+    <p>Institute affiliates bring expertise across a range of quantitative and computational methods:</p>
+    <div class="research-pillars">
+      <div class="pillar">
+        <h3>Statistical &amp; Quantitative</h3>
+        <ul>
+          <li>Ecological inference (EI, RxC)</li>
+          <li>Causal inference and observational methods</li>
+          <li>Survey design and analysis</li>
+          <li>Spatial analysis and geocoding</li>
+          <li>R software development</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <h3>Computational &amp; Qualitative</h3>
+        <ul>
+          <li>Natural language processing</li>
+          <li>Large language model evaluation</li>
+          <li>Supervised text classification</li>
+          <li>Qualitative process tracing</li>
+          <li>Archival and fieldwork methods</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Institute for Study of Rights and Repression</p>
+    <p class="unm-link">
+      <a href="https://polisci.unm.edu">Department of Political Science</a> &middot;
+      <a href="https://www.unm.edu">University of New Mexico</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
